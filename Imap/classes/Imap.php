@@ -27,7 +27,7 @@ class Imap
      * @param string $tls
      * @return boolean
      */
-    public function connect($username, $password, $folder = "INBOX", $port = 143, $tls = "notls")
+    public function connect($server, $username, $password, $folder = "INBOX", $port = 143, $tls = "notls")
     {
         $this->_imap_server = '{' . $server . ':' . $port . '/' . $tls . '}';
         $this->_mailbox = $this->_imap_server . $folder;
